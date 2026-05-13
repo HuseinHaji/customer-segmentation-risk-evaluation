@@ -1,94 +1,117 @@
-# Customer Segmentation and Risk Evaluation
+# Customer Segmentation & Risk Evaluation
 
-[![CI](https://github.com/HuseinHaji/customer-segmentation-risk-evaluation/actions/workflows/ci.yml/badge.svg)](https://github.com/HuseinHaji/customer-segmentation-risk-evaluation/actions/workflows/ci.yml)
+## Business Context
 
-End-to-end customer analytics project that scores customer value, activity, and risk, then turns those signals into explainable segments and an action queue.
+This project explores customer behavior and risk using synthetic customer master and financial metrics. The business aims to identify customer segments, assess risk exposure, and support targeted portfolio management.
 
-## Business Goal
+The analysis is intended for management reporting and customer relationship planning.
 
-Commercial and risk teams need a shared customer view: who should be protected, who needs monitoring, and who is still early in the relationship. This project creates transparent scoring rules that connect customer economics with practical next actions.
+## Business Value
 
-## Architecture
+- Identifies strategic customer segments for cross-sell and retention.
+- Quantifies risk characteristics by customer group.
+- Supports risk-adjusted revenue forecasting.
+- Produces segment-level metrics for business review.
 
-```mermaid
-flowchart LR
-    A[Customer Metrics CSV] --> B[Input Validation]
-    B --> C[Value Score]
-    B --> D[Activity Score]
-    B --> E[Risk Score]
-    C --> F[Segmentation Rules]
-    D --> F
-    E --> F
-    F --> G[Segment Summary]
-    F --> H[Action Queue]
-    F --> I[Sector Summary]
-    F --> J[Treatment Plan]
-```
+## Tech Stack
 
-## Repository Structure
+- Python 3.10+ (pandas, numpy, scikit-learn)
+- PostgreSQL-style SQL
+- Power BI-ready CSV outputs
+- Jupyter Notebook for analysis
+
+## Dataset
+
+The data is fully synthetic. It includes customer demographics, revenue and margin metrics, payment behavior, overdue amounts, product exposure and credit information.
+
+## Data Model
+
+- `customer_features.csv`: engineered customer-level attributes.
+- `customer_segments.csv`: cluster-based segment assignment.
+- `risk_scored_customers.csv`: risk score and category.
+- `segment_summary.csv`: aggregated segment metrics.
+- `powerbi_customer_dashboard.csv`: dataset ready for visualization.
+
+## Key KPIs
+
+- Total revenue
+- Average margin
+- High-risk customer share
+- Average payment delay
+- Overdue amount
+- Number of customer segments
+- Revenue by segment
+- Margin by segment
+- Risk score by segment
+- Default rate by segment
+
+## Project Structure
 
 ```text
-.
+customer-segmentation-risk-evaluation/
+├── README.md
+├── requirements.txt
+├── .gitignore
 ├── data/
-│   └── customers.csv
-├── output/
-│   ├── action_queue.csv
-│   ├── customer_segments.csv
-│   ├── sector_summary.csv
-│   ├── segment_summary.csv
-│   └── treatment_plan.csv
-└── src/
-    └── segment_customers.py
+│   ├── raw/
+│   ├── processed/
+│   └── powerbi/
+├── sql/
+│   └── customer_segmentation_queries.sql
+├── src/
+│   ├── generate_customer_data.py
+│   ├── feature_engineering.py
+│   ├── segmentation_model.py
+│   ├── risk_scoring.py
+│   └── export_powerbi.py
+├── notebooks/
+│   └── customer_segmentation_analysis.ipynb
+└── screenshots/
+    └── .gitkeep
 ```
 
-## What The Pipeline Does
-
-- Validates required customer fields before scoring.
-- Scores value from annual revenue, activity from tenure, and risk from late payments plus balance exposure.
-- Assigns customers to explainable segments: high value / low risk, watchlist, new relationship, or core customer.
-- Adds next-best-action recommendations for relationship and risk teams.
-- Summarizes segment-level revenue, balance exposure, and average risk.
-- Estimates churn-risk tier from payment behavior, balance exposure, and tenure.
-- Builds sector-level risk summaries and treatment playbooks.
-
-## Outputs
-
-| File | Purpose |
-| --- | --- |
-| `output/customer_segments.csv` | Customer-level scoring, segment, exposure ratio, and next action. |
-| `output/segment_summary.csv` | Segment-level rollup of revenue, balance, and risk. |
-| `output/action_queue.csv` | Prioritized customer actions for commercial/risk follow-up. |
-| `output/sector_summary.csv` | Sector-level revenue, balance, risk, and churn-risk summary. |
-| `output/treatment_plan.csv` | Customer-level playbook assignment by risk tier. |
-
-## Run Locally
+## How to Run
 
 ```bash
-python3 src/segment_customers.py
+cd customer-segmentation-risk-evaluation
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python src/generate_customer_data.py
+python src/feature_engineering.py
+python src/segmentation_model.py
+python src/risk_scoring.py
+python src/export_powerbi.py
 ```
 
-No third-party packages are required; the project uses the Python standard library.
+For Windows:
 
-## Test
-
-```bash
-python3 -m pip install -r requirements-dev.txt
-python3 -m pytest
+```powershell
+.venv\Scriptsctivate
 ```
 
-## Simulated Business Impact
+## Dashboard Design
 
-- Converts customer metrics into a common language for commercial and risk teams.
-- Prioritizes customers for review instead of leaving segmentation as a static label.
-- Adds treatment playbooks so outputs can drive action, not only reporting.
+Power BI pages:
 
-## How To Extend
+1. Customer Overview
+2. Segment Analysis
+3. Risk Evaluation
+4. Revenue & Margin Trends
+5. Customer Drilldown
 
-- Add transaction history and recency/frequency/monetary features.
-- Train a supervised churn or delinquency model when labeled outcomes exist.
-- Connect the treatment plan to CRM tasks.
-- Add threshold configuration so risk appetite can be changed without editing code.
+## Example Insights
 
-## Skills Demonstrated
+- A small group of high-value customers deliver the largest portion of revenue but also carry elevated risk indicators.
+- Stable low-risk segments show strong payment behavior and low overdue exposure.
+- Growth potential customers show above-average revenue with moderate payment delay.
 
-Customer analytics, risk scoring, churn-risk triage, segmentation design, explainable business rules, stakeholder-friendly action queues, and BI-ready data preparation.
+## Future Improvements
+
+- Add time-series customer cohort analysis.
+- Include product-level penetration by segment.
+- Automate segment adjustment based on new customer data.
+
+## Disclaimer
+
+This project uses fully synthetic data created for portfolio demonstration purposes. It does not contain confidential, proprietary, or real company data.

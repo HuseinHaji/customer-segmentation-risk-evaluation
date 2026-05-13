@@ -1,0 +1,121 @@
+customer_id,risk_score,risk_category,default_rate,cluster_label,country,industry,revenue,margin,payment_delay,overdue_amount
+CUST001,4.2306429922621875,Moderate Risk,0.0,High Value / Watchlist,Germany,Retail,1403403.58,0.1057,8.0,67850.41
+CUST002,3.546754178060822,Moderate Risk,0.0,High Value / Low Risk,Italy,FMCG,1106038.51,0.2007,6.8,16989.79
+CUST003,3.675640043998108,Moderate Risk,0.0,Low Value / Stable,Germany,Retail,492336.32,0.242,16.0,6788.5
+CUST004,3.968549020258111,Moderate Risk,0.0,Low Value / Stable,Germany,FMCG,537093.67,0.2001,22.0,2391.12
+CUST005,3.527890126381388,Moderate Risk,0.0,Growth Potential,Austria,Automotive,706451.33,0.1707,0.0,18605.29
+CUST006,4.423727319047414,Moderate Risk,0.0,Growth Potential,Italy,Automotive,806499.07,0.0996,12.1,42219.62
+CUST007,3.8793398101215177,Moderate Risk,0.0,Low Value / Stable,Germany,Automotive,568265.2,0.2045,8.0,30592.07
+CUST008,3.8016329824802733,Moderate Risk,0.0,High Value / Low Risk,France,FMCG,968297.1,0.177,14.7,2376.32
+CUST009,4.074615870432441,Moderate Risk,0.0,High Value / Low Risk,Netherlands,Automotive,1210252.34,0.1553,9.3,58366.82
+CUST010,4.4088079489111465,Moderate Risk,0.0,Low Value / Stable,Germany,Pharma,377333.19,0.1565,22.8,12961.77
+CUST011,3.975965942344528,Moderate Risk,0.0,High Value / Low Risk,Netherlands,Pharma,1126903.29,0.1859,14.6,32806.87
+CUST012,4.296120005770181,Moderate Risk,1.0,High Value / Low Risk,Germany,FMCG,923899.33,0.1748,21.8,31026.08
+CUST013,3.9910795936461323,Moderate Risk,0.0,High Value / Low Risk,Austria,Automotive,1005633.84,0.1661,13.6,25410.64
+CUST014,3.8404164106401666,Moderate Risk,0.0,Growth Potential,Austria,Logistics,646136.24,0.2093,8.3,32383.52
+CUST015,3.753283869208507,Moderate Risk,1.0,High Value / Low Risk,Italy,Retail,920793.73,0.1818,8.8,21540.88
+CUST016,3.703153360658211,Moderate Risk,0.0,Growth Potential,Germany,FMCG,627118.37,0.1723,0.0,30756.5
+CUST017,4.347068461077471,Moderate Risk,0.0,High Value / Low Risk,France,Pharma,1077295.49,0.1835,22.5,44582.32
+CUST018,4.4006466415034335,Moderate Risk,0.0,High Value / Low Risk,Germany,FMCG,1066235.57,0.1351,13.8,64113.63
+CUST019,4.1937062369712335,Moderate Risk,0.0,High Value / Watchlist,France,Pharma,1422005.65,0.1667,14.5,67042.75
+CUST020,3.8844903921313403,Moderate Risk,0.0,Low Value / Stable,Austria,Retail,297324.7,0.1593,3.4,15176.83
+CUST021,3.9930672427713745,Moderate Risk,0.0,Growth Potential,Italy,Pharma,735028.42,0.1894,14.1,25787.3
+CUST022,4.252881591860781,Moderate Risk,0.0,High Value / Low Risk,Netherlands,FMCG,995138.28,0.1586,24.7,7954.67
+CUST023,3.4403612363178633,Moderate Risk,0.0,High Value / Low Risk,France,Retail,1188980.96,0.2019,0.9,32393.97
+CUST024,3.756188579884504,Moderate Risk,1.0,High Value / Low Risk,France,FMCG,965631.39,0.1609,11.7,1181.52
+CUST025,3.656662962054954,Moderate Risk,0.0,High Value / Low Risk,France,Logistics,960057.43,0.1595,7.4,5759.9
+CUST026,3.8377167024028798,Moderate Risk,0.0,High Value / Low Risk,Austria,Retail,916134.19,0.1878,13.6,15526.57
+CUST027,4.2140944391079795,Moderate Risk,0.0,High Value / Low Risk,Italy,Pharma,995207.48,0.162,21.1,19750.03
+CUST028,4.317854186889256,Moderate Risk,0.0,Low Value / Stable,Italy,Retail,427492.24,0.112,11.9,19728.1
+CUST029,3.799394932841693,Moderate Risk,1.0,High Value / Low Risk,Austria,FMCG,833357.82,0.2141,7.4,42618.78
+CUST030,4.290468844512159,Moderate Risk,1.0,High Value / Low Risk,Austria,Retail,1161012.88,0.1908,18.4,63904.4
+CUST031,4.149428082874452,Moderate Risk,0.0,High Value / Low Risk,France,Retail,921411.59,0.1363,17.1,14354.22
+CUST032,3.9827699278645703,Moderate Risk,0.0,High Value / Low Risk,Italy,Logistics,1043627.25,0.1817,19.5,7771.1
+CUST033,3.662662114876841,Moderate Risk,0.0,Growth Potential,Germany,Retail,695348.45,0.2451,10.1,26631.45
+CUST034,4.424090359795287,Moderate Risk,0.0,Growth Potential,Austria,Automotive,713316.18,0.1383,17.7,34532.56
+CUST035,4.197994907893537,Moderate Risk,0.0,High Value / Low Risk,France,Logistics,1016713.49,0.1885,14.2,60832.71
+CUST036,4.7803717887733885,High Risk,0.0,Growth Potential,France,Automotive,700544.56,0.0536,16.7,38364.02
+CUST037,3.7047614726972773,Moderate Risk,0.0,High Value / Low Risk,Austria,Retail,831890.54,0.2015,8.0,25382.52
+CUST038,3.9656489343060706,Moderate Risk,0.0,Low Value / Stable,France,Logistics,510527.29,0.1684,15.8,7184.54
+CUST039,3.899207763961014,Moderate Risk,0.0,Low Value / Stable,Austria,Pharma,459737.84,0.1732,13.0,9118.58
+CUST040,4.038363903897363,Moderate Risk,0.0,Growth Potential,France,Logistics,743343.04,0.1374,4.3,41314.13
+CUST041,4.353609943423272,Moderate Risk,0.0,Low Value / Stable,Netherlands,FMCG,570309.29,0.0781,9.1,25854.73
+CUST042,3.525335833869962,Moderate Risk,0.0,Low Value / Stable,Germany,FMCG,331280.89,0.239,12.7,2401.89
+CUST043,3.9362455946537667,Moderate Risk,0.0,High Value / Watchlist,Austria,Logistics,1335976.15,0.1675,11.1,39452.31
+CUST044,3.448613550959412,Moderate Risk,0.0,High Value / Low Risk,Germany,FMCG,888354.32,0.2726,12.8,12475.48
+CUST045,3.6368513408204923,Moderate Risk,0.0,Growth Potential,Austria,Retail,702923.45,0.2133,5.5,26949.91
+CUST046,4.706887279321644,High Risk,0.0,High Value / Watchlist,Italy,Automotive,1422083.28,0.1161,21.0,83776.22
+CUST047,3.6365706687090946,Moderate Risk,0.0,High Value / Low Risk,Austria,Automotive,831716.07,0.1998,12.0,3718.88
+CUST048,3.7842003453861297,Moderate Risk,0.0,Growth Potential,Italy,FMCG,760966.67,0.2044,3.5,46146.32
+CUST049,3.9949654712625358,Moderate Risk,0.0,High Value / Low Risk,France,Logistics,1020239.35,0.1909,10.0,54229.82
+CUST050,4.324890089173628,Moderate Risk,0.0,High Value / Low Risk,Germany,Pharma,868912.34,0.154,20.8,26888.14
+CUST051,3.5483679729620383,Moderate Risk,1.0,Growth Potential,Italy,Retail,797036.43,0.1382,0.0,10079.32
+CUST052,4.035067823305884,Moderate Risk,0.0,High Value / Low Risk,France,Pharma,886506.34,0.1216,11.6,14937.76
+CUST053,4.360381871401575,Moderate Risk,0.0,High Value / Watchlist,France,Pharma,1296460.88,0.04,1.1,78389.73
+CUST054,4.130188265726869,Moderate Risk,0.0,Growth Potential,Italy,Pharma,646261.93,0.1774,23.4,4829.86
+CUST055,4.239880233635881,Moderate Risk,0.0,Growth Potential,Germany,Automotive,639113.02,0.1422,14.5,25991.68
+CUST056,4.614461221538731,High Risk,1.0,Growth Potential,Netherlands,FMCG,673986.98,0.0654,19.5,19045.29
+CUST057,3.5020216408809692,Moderate Risk,0.0,High Value / Low Risk,Netherlands,Automotive,1181715.17,0.2277,9.8,12726.33
+CUST058,3.865356844245438,Moderate Risk,0.0,Growth Potential,Austria,Logistics,589543.44,0.1866,5.3,32063.07
+CUST059,4.249208150772038,Moderate Risk,0.0,High Value / Low Risk,Netherlands,Logistics,1198065.65,0.1161,12.6,43970.23
+CUST060,4.051024843422345,Moderate Risk,0.0,Growth Potential,Austria,Logistics,768380.18,0.1455,8.3,34227.32
+CUST061,2.9149204153746147,Moderate Risk,0.0,High Value / Low Risk,Austria,FMCG,832106.7,0.3005,2.9,2106.66
+CUST062,4.120392937917252,Moderate Risk,0.0,Growth Potential,Netherlands,Logistics,773398.66,0.1622,16.4,21512.69
+CUST063,4.333370956088555,Moderate Risk,0.0,High Value / Watchlist,Netherlands,Automotive,1289992.64,0.1076,9.0,74782.64
+CUST064,3.7550423963975597,Moderate Risk,0.0,High Value / Low Risk,Italy,FMCG,886927.07,0.2043,3.7,49768.7
+CUST065,4.326865808751496,Moderate Risk,0.0,Low Value / Stable,Germany,Pharma,537945.96,0.163,19.6,21889.86
+CUST066,4.089544302832487,Moderate Risk,0.0,Growth Potential,Austria,Pharma,773133.08,0.1284,12.2,18987.92
+CUST067,4.186272076176978,Moderate Risk,0.0,Growth Potential,Italy,Pharma,736442.26,0.1378,14.9,22167.41
+CUST068,4.468568354395352,Moderate Risk,0.0,Low Value / Stable,Italy,FMCG,517841.33,0.0627,11.4,21967.37
+CUST069,3.9853635035624926,Moderate Risk,0.0,High Value / Low Risk,France,FMCG,895478.78,0.172,7.0,49254.71
+CUST070,4.210293437725299,Moderate Risk,0.0,High Value / Low Risk,Germany,Logistics,812772.64,0.1602,12.2,45152.24
+CUST071,3.8595183203940637,Moderate Risk,1.0,Low Value / Stable,France,Pharma,522019.43,0.139,12.1,795.1
+CUST072,3.860116071685955,Moderate Risk,0.0,High Value / Low Risk,Italy,FMCG,1157780.11,0.2001,6.4,64717.41
+CUST073,4.432809751469636,Moderate Risk,0.0,Growth Potential,France,FMCG,767121.02,0.1015,18.2,22260.23
+CUST074,4.705051516560975,High Risk,0.0,Growth Potential,Netherlands,Pharma,777387.58,0.1451,24.5,45553.44
+CUST075,3.6924807920665508,Moderate Risk,0.0,Low Value / Stable,Germany,Automotive,165206.32,0.1074,3.6,42.97
+CUST076,4.3654132253238505,Moderate Risk,0.0,Growth Potential,France,Logistics,764555.09,0.1122,9.7,46913.09
+CUST077,4.408730612456675,Moderate Risk,0.0,High Value / Low Risk,Germany,Automotive,876160.26,0.153,21.4,33666.16
+CUST078,3.809766019781406,Moderate Risk,0.0,High Value / Low Risk,France,FMCG,1245347.59,0.2038,8.3,54219.22
+CUST079,4.221509526393306,Moderate Risk,0.0,High Value / Low Risk,Italy,Retail,938214.57,0.1623,18.1,31357.03
+CUST080,4.530331018800307,High Risk,0.0,Growth Potential,Germany,FMCG,761422.13,0.148,21.9,37341.19
+CUST081,3.61165128953495,Moderate Risk,0.0,Growth Potential,Netherlands,Retail,625608.48,0.1417,0.0,13955.08
+CUST082,4.31125382655423,Moderate Risk,0.0,Low Value / Stable,Italy,Logistics,508836.51,0.2018,20.1,28523.71
+CUST083,4.426796669519881,Moderate Risk,0.0,Growth Potential,Germany,Pharma,801902.4,0.1265,19.6,28012.79
+CUST084,4.019813913064079,Moderate Risk,0.0,High Value / Low Risk,France,Logistics,943516.63,0.1576,12.7,26758.2
+CUST085,3.910191141234164,Moderate Risk,0.0,High Value / Low Risk,Netherlands,Pharma,1066527.57,0.2218,19.8,18316.43
+CUST086,3.441674650441665,Moderate Risk,0.0,High Value / Low Risk,France,Automotive,833479.15,0.2359,2.3,32152.29
+CUST087,4.125084519248606,Moderate Risk,0.0,High Value / Low Risk,Netherlands,Automotive,1104912.97,0.1472,15.6,26778.19
+CUST088,4.0344775549456315,Moderate Risk,0.0,High Value / Low Risk,France,Pharma,1160843.88,0.1072,11.4,12084.03
+CUST089,3.848123638748224,Moderate Risk,0.0,Growth Potential,Germany,Automotive,778331.4,0.1923,17.4,3631.27
+CUST090,3.6880200763975055,Moderate Risk,0.0,High Value / Low Risk,Austria,FMCG,1024792.62,0.1652,0.0,44683.53
+CUST091,4.7117179317285505,High Risk,0.0,Low Value / Stable,Germany,Retail,516376.32,0.1012,18.2,32909.39
+CUST092,4.493014442697875,Moderate Risk,0.0,Growth Potential,Italy,FMCG,660596.8,0.1165,16.2,34599.95
+CUST093,3.3085351574059825,Moderate Risk,0.0,High Value / Low Risk,Netherlands,Pharma,853521.56,0.2114,0.0,16444.71
+CUST094,4.510781741146568,High Risk,0.0,High Value / Low Risk,France,Retail,988331.5,0.1431,21.9,43632.58
+CUST095,4.127606609292136,Moderate Risk,0.0,High Value / Low Risk,Austria,Automotive,918028.72,0.0866,11.7,9640.06
+CUST096,3.9780056918184803,Moderate Risk,0.0,High Value / Watchlist,Austria,Logistics,1528805.84,0.1248,13.4,5836.03
+CUST097,3.4046385039964733,Moderate Risk,0.0,Growth Potential,Austria,Automotive,687438.13,0.211,1.9,15923.23
+CUST098,4.379014686896571,Moderate Risk,0.0,Low Value / Stable,Austria,FMCG,411765.32,0.1319,25.0,3771.84
+CUST099,3.908991537858789,Moderate Risk,0.0,Growth Potential,Austria,FMCG,607753.98,0.224,13.5,26968.44
+CUST100,3.968566911933189,Moderate Risk,0.0,Growth Potential,Germany,Retail,590125.38,0.1645,9.5,22860.0
+CUST101,4.22608387769689,Moderate Risk,0.0,High Value / Low Risk,Austria,Retail,827406.6,0.1796,18.7,33215.26
+CUST102,3.7438859139131906,Moderate Risk,0.0,High Value / Watchlist,Austria,FMCG,1464327.48,0.1991,11.3,29949.02
+CUST103,4.3931500224381645,Moderate Risk,0.0,High Value / Low Risk,France,Automotive,825334.86,0.1138,13.5,41096.52
+CUST104,3.4662182075594368,Moderate Risk,0.0,High Value / Low Risk,France,Pharma,1096068.59,0.1953,0.3,32528.33
+CUST105,3.800222137017381,Moderate Risk,0.0,Low Value / Stable,Italy,Logistics,482653.85,0.1647,13.0,1549.85
+CUST106,4.079224238592946,Moderate Risk,0.0,Growth Potential,Netherlands,FMCG,623098.05,0.1836,17.9,16898.23
+CUST107,4.00504360041017,Moderate Risk,0.0,Growth Potential,Austria,Pharma,668786.69,0.1201,6.9,21354.66
+CUST108,4.437526977749984,Moderate Risk,0.0,High Value / Low Risk,Netherlands,Logistics,949170.15,0.2115,26.8,46295.02
+CUST109,3.655377601926742,Moderate Risk,0.0,Growth Potential,Netherlands,Pharma,667281.95,0.176,7.8,8289.11
+CUST110,4.568279598563517,High Risk,0.0,Growth Potential,Germany,FMCG,779892.91,0.0944,16.9,37293.14
+CUST111,4.564148112283995,High Risk,1.0,Growth Potential,Austria,Automotive,670844.2,0.102,16.4,35678.97
+CUST112,3.8145770856895287,Moderate Risk,0.0,Growth Potential,Austria,Pharma,782537.97,0.1537,7.0,19176.46
+CUST113,3.7962229893943915,Moderate Risk,0.0,Low Value / Stable,Germany,FMCG,571734.33,0.1279,4.6,11040.88
+CUST114,4.198273200693381,Moderate Risk,0.0,Low Value / Stable,Austria,Logistics,566903.1,0.1312,6.7,35413.01
+CUST115,4.124257054807318,Moderate Risk,0.0,High Value / Low Risk,Italy,Logistics,919885.01,0.1374,10.8,36089.05
+CUST116,4.535523703569121,High Risk,0.0,High Value / Low Risk,France,FMCG,965285.94,0.1183,15.8,58165.36
+CUST117,4.3956972395965135,Moderate Risk,0.0,High Value / Low Risk,Germany,Retail,913210.7,0.1203,19.8,24759.11
+CUST118,4.486825031732521,Moderate Risk,0.0,Growth Potential,Netherlands,Retail,636098.2,0.1245,19.5,26622.7
+CUST119,3.9565458441571666,Moderate Risk,0.0,Growth Potential,Italy,Pharma,684573.41,0.0771,0.0,22671.86
+CUST120,4.4707506374440324,Moderate Risk,0.0,Growth Potential,Austria,Logistics,749556.0,0.1298,21.0,27166.78
