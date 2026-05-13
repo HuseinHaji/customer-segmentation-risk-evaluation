@@ -1,0 +1,10 @@
+customer_id,sector,annual_revenue_eur,months_active,late_payments,open_balance_eur
+C001,Manufacturing,820000,48,0,42000
+C002,Retail,210000,14,3,36000
+C003,Technology,640000,36,1,28000
+C004,Construction,175000,9,4,41000
+C005,Services,390000,28,0,12000
+C006,Logistics,520000,31,2,50000
+C007,Energy,910000,55,1,62000
+C008,Retail,160000,7,5,33000
+
