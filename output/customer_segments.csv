@@ -1,9 +1,9 @@
-customer_id,sector,annual_revenue_eur,months_active,late_payments,open_balance_eur,value_score,activity_score,risk_score,segment
-C001,Manufacturing,820000,48,0,42000,3,3,5.1,High value / low risk
-C002,Retail,210000,14,3,36000,1,2,62.1,Watchlist
-C003,Technology,640000,36,1,28000,3,3,19.4,High value / low risk
-C004,Construction,175000,9,4,41000,1,1,83.4,Watchlist
-C005,Services,390000,28,0,12000,2,2,3.1,Core customer
-C006,Logistics,520000,31,2,50000,2,2,39.6,Core customer
-C007,Energy,910000,55,1,62000,3,3,21.8,Core customer
-C008,Retail,160000,7,5,33000,1,1,95.6,Watchlist
+customer_id,sector,annual_revenue_eur,months_active,late_payments,open_balance_eur,value_score,activity_score,risk_score,open_balance_to_revenue,segment,next_best_action
+C001,Manufacturing,820000,48,0,42000,3,3,5.1,0.051,High value / low risk,Protect relationship; offer premium analytics review
+C002,Retail,210000,14,3,36000,1,2,62.1,0.171,Watchlist,Run payment-risk review and agree remediation plan
+C003,Technology,640000,36,1,28000,3,3,19.4,0.044,High value / low risk,Protect relationship; offer premium analytics review
+C004,Construction,175000,9,4,41000,1,1,83.4,0.234,Watchlist,Run payment-risk review and agree remediation plan
+C005,Services,390000,28,0,12000,2,2,3.1,0.031,Core customer,Monitor activity and cross-sell relevant service
+C006,Logistics,520000,31,2,50000,2,2,39.6,0.096,Core customer,Monitor activity and cross-sell relevant service
+C007,Energy,910000,55,1,62000,3,3,21.8,0.068,Core customer,Monitor activity and cross-sell relevant service
+C008,Retail,160000,7,5,33000,1,1,95.6,0.206,Watchlist,Run payment-risk review and agree remediation plan

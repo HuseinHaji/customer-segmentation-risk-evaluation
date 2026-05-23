@@ -1,0 +1,6 @@
+customer_id,sector,segment,risk_score,annual_revenue_eur,next_best_action
+C002,Retail,Watchlist,62.1,210000,Run payment-risk review and agree remediation plan
+C004,Construction,Watchlist,83.4,175000,Run payment-risk review and agree remediation plan
+C008,Retail,Watchlist,95.6,160000,Run payment-risk review and agree remediation plan
+C001,Manufacturing,High value / low risk,5.1,820000,Protect relationship; offer premium analytics review
+C003,Technology,High value / low risk,19.4,640000,Protect relationship; offer premium analytics review
