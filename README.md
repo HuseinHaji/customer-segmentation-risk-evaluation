@@ -1,5 +1,7 @@
 # Customer Segmentation and Risk Evaluation
 
+[![CI](https://github.com/HuseinHaji/customer-segmentation-risk-evaluation/actions/workflows/ci.yml/badge.svg)](https://github.com/HuseinHaji/customer-segmentation-risk-evaluation/actions/workflows/ci.yml)
+
 End-to-end customer analytics project that scores customer value, activity, and risk, then turns those signals into explainable segments and an action queue.
 
 ## Business Goal
@@ -66,6 +68,26 @@ python3 src/segment_customers.py
 ```
 
 No third-party packages are required; the project uses the Python standard library.
+
+## Test
+
+```bash
+python3 -m pip install -r requirements-dev.txt
+python3 -m pytest
+```
+
+## Simulated Business Impact
+
+- Converts customer metrics into a common language for commercial and risk teams.
+- Prioritizes customers for review instead of leaving segmentation as a static label.
+- Adds treatment playbooks so outputs can drive action, not only reporting.
+
+## How To Extend
+
+- Add transaction history and recency/frequency/monetary features.
+- Train a supervised churn or delinquency model when labeled outcomes exist.
+- Connect the treatment plan to CRM tasks.
+- Add threshold configuration so risk appetite can be changed without editing code.
 
 ## Skills Demonstrated
 
