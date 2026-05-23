@@ -1,0 +1,9 @@
+customer_id,segment,risk_tier,churn_risk_score,playbook
+C008,Watchlist,high,79.0,Immediate risk review and payment plan
+C004,Watchlist,high,67.5,Immediate risk review and payment plan
+C002,Watchlist,medium,43.8,Relationship manager check-in within 30 days
+C006,Core customer,low,21.8,Standard monitoring cadence
+C007,Core customer,low,12.0,Standard monitoring cadence
+C003,High value / low risk,low,10.7,Standard monitoring cadence
+C001,High value / low risk,low,2.8,Standard monitoring cadence
+C005,Core customer,low,1.7,Standard monitoring cadence

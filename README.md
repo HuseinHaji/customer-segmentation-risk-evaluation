@@ -19,6 +19,8 @@ flowchart LR
     E --> F
     F --> G[Segment Summary]
     F --> H[Action Queue]
+    F --> I[Sector Summary]
+    F --> J[Treatment Plan]
 ```
 
 ## Repository Structure
@@ -30,7 +32,9 @@ flowchart LR
 ├── output/
 │   ├── action_queue.csv
 │   ├── customer_segments.csv
-│   └── segment_summary.csv
+│   ├── sector_summary.csv
+│   ├── segment_summary.csv
+│   └── treatment_plan.csv
 └── src/
     └── segment_customers.py
 ```
@@ -42,6 +46,8 @@ flowchart LR
 - Assigns customers to explainable segments: high value / low risk, watchlist, new relationship, or core customer.
 - Adds next-best-action recommendations for relationship and risk teams.
 - Summarizes segment-level revenue, balance exposure, and average risk.
+- Estimates churn-risk tier from payment behavior, balance exposure, and tenure.
+- Builds sector-level risk summaries and treatment playbooks.
 
 ## Outputs
 
@@ -50,6 +56,8 @@ flowchart LR
 | `output/customer_segments.csv` | Customer-level scoring, segment, exposure ratio, and next action. |
 | `output/segment_summary.csv` | Segment-level rollup of revenue, balance, and risk. |
 | `output/action_queue.csv` | Prioritized customer actions for commercial/risk follow-up. |
+| `output/sector_summary.csv` | Sector-level revenue, balance, risk, and churn-risk summary. |
+| `output/treatment_plan.csv` | Customer-level playbook assignment by risk tier. |
 
 ## Run Locally
 
@@ -61,4 +69,4 @@ No third-party packages are required; the project uses the Python standard libra
 
 ## Skills Demonstrated
 
-Customer analytics, risk scoring, segmentation design, explainable business rules, stakeholder-friendly action queues, and BI-ready data preparation.
+Customer analytics, risk scoring, churn-risk triage, segmentation design, explainable business rules, stakeholder-friendly action queues, and BI-ready data preparation.

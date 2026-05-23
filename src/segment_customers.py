@@ -41,6 +41,8 @@ def score_customer(row):
         segment = "Core customer"
 
     exposure_pct = balance / max(revenue, 1)
+    churn_risk = min(100, risk_score * 0.55 + max(0, 18 - months_active) * 2.4)
+    risk_tier = "high" if churn_risk >= 45 else "medium" if churn_risk >= 25 else "low"
     next_best_action = {
         "High value / low risk": "Protect relationship; offer premium analytics review",
         "Watchlist": "Run payment-risk review and agree remediation plan",
@@ -54,6 +56,8 @@ def score_customer(row):
         "activity_score": activity_score,
         "risk_score": round(risk_score, 1),
         "open_balance_to_revenue": round(exposure_pct, 3),
+        "churn_risk_score": round(churn_risk, 1),
+        "risk_tier": risk_tier,
         "segment": segment,
         "next_best_action": next_best_action,
     }
@@ -104,6 +108,50 @@ def build_action_queue(rows):
     return sorted(queue, key=lambda item: (priority[item["segment"]], -float(item["annual_revenue_eur"])))
 
 
+def build_sector_summary(rows):
+    grouped = {}
+    for row in rows:
+        bucket = grouped.setdefault(
+            row["sector"],
+            {"sector": row["sector"], "customers": 0, "revenue": 0.0, "balance": 0.0, "risk": 0.0, "churn": 0.0},
+        )
+        bucket["customers"] += 1
+        bucket["revenue"] += as_float(row, "annual_revenue_eur")
+        bucket["balance"] += as_float(row, "open_balance_eur")
+        bucket["risk"] += row["risk_score"]
+        bucket["churn"] += row["churn_risk_score"]
+
+    return [
+        {
+            "sector": values["sector"],
+            "customers": values["customers"],
+            "annual_revenue_eur": round(values["revenue"], 2),
+            "open_balance_eur": round(values["balance"], 2),
+            "avg_risk_score": round(values["risk"] / values["customers"], 1),
+            "avg_churn_risk_score": round(values["churn"] / values["customers"], 1),
+        }
+        for values in sorted(grouped.values(), key=lambda item: item["revenue"], reverse=True)
+    ]
+
+
+def build_treatment_plan(rows):
+    playbooks = {
+        "high": "Immediate risk review and payment plan",
+        "medium": "Relationship manager check-in within 30 days",
+        "low": "Standard monitoring cadence",
+    }
+    return [
+        {
+            "customer_id": row["customer_id"],
+            "segment": row["segment"],
+            "risk_tier": row["risk_tier"],
+            "churn_risk_score": row["churn_risk_score"],
+            "playbook": playbooks[row["risk_tier"]],
+        }
+        for row in sorted(rows, key=lambda item: item["churn_risk_score"], reverse=True)
+    ]
+
+
 def write_csv(path, rows):
     if not rows:
         return
@@ -126,6 +174,8 @@ def main():
     write_csv(OUTPUT_DIR / "customer_segments.csv", rows)
     write_csv(OUTPUT_DIR / "segment_summary.csv", build_segment_summary(rows))
     write_csv(OUTPUT_DIR / "action_queue.csv", build_action_queue(rows))
+    write_csv(OUTPUT_DIR / "sector_summary.csv", build_sector_summary(rows))
+    write_csv(OUTPUT_DIR / "treatment_plan.csv", build_treatment_plan(rows))
 
     print(f"Wrote customer segmentation outputs to {OUTPUT_DIR}")
 
