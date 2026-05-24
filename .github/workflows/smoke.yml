@@ -19,7 +19,11 @@ jobs:
           python -m venv .venv
           source .venv/bin/activate
           pip install --upgrade pip
-          pip install -r requirements.txt || true
+          pip install -r requirements.txt
+      - name: Generate dashboard data
+        run: |
+          source .venv/bin/activate
+          python src/segment_customers.py
       - name: Start Streamlit app
         run: |
           source .venv/bin/activate

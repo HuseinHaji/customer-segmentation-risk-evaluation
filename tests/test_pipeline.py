@@ -3,7 +3,6 @@ import subprocess
 import sys
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parents[1]
 
 
@@ -12,7 +11,7 @@ def read_csv(path):
         return list(csv.DictReader(file))
 
 
-def test_pipeline_generates_customer_intelligence_outputs():
+def test_pipeline_generates_processed_outputs():
     result = subprocess.run(
         [sys.executable, "src/segment_customers.py"],
         cwd=ROOT,
@@ -21,16 +20,35 @@ def test_pipeline_generates_customer_intelligence_outputs():
         text=True,
     )
 
-    assert "customer segmentation outputs" in result.stdout
+    output_text = result.stdout.lower()
+    assert "pipeline complete" in output_text
 
-    customers = read_csv(ROOT / "output" / "customer_segments.csv")
-    segments = read_csv(ROOT / "output" / "segment_summary.csv")
-    treatment = read_csv(ROOT / "output" / "treatment_plan.csv")
-    sectors = read_csv(ROOT / "output" / "sector_summary.csv")
+    processed_files = [
+        ROOT / "data" / "processed" / "customer_features.csv",
+        ROOT / "data" / "processed" / "customer_segments.csv",
+        ROOT / "data" / "processed" / "risk_scored_customers.csv",
+        ROOT / "data" / "processed" / "segment_summary.csv",
+        ROOT / "data" / "powerbi" / "powerbi_customer_dashboard.csv",
+    ]
 
-    assert len(customers) == 8
-    assert {"Watchlist", "High value / low risk"} <= {row["segment"] for row in customers}
-    assert all(row["risk_tier"] in {"low", "medium", "high"} for row in customers)
-    assert treatment[0]["playbook"]
-    assert sectors
-    assert segments
+    for path in processed_files:
+        assert path.exists(), f"Missing expected output file: {path}"
+
+    customer_rows = read_csv(ROOT / "data" / "processed" / "customer_features.csv")
+    risk_rows = read_csv(ROOT / "data" / "processed" / "risk_scored_customers.csv")
+
+    assert customer_rows, "customer_features.csv should not be empty"
+    assert risk_rows, "risk_scored_customers.csv should not be empty"
+
+    customer_ids = {row["customer_id"] for row in customer_rows}
+    assert len(customer_ids) == len(customer_rows), "Duplicate customer_id found in customer_features.csv"
+
+    assert all(row["segment_name"] for row in customer_rows), "All customers must have a segment_name"
+    assert all(row["risk_category"] in {"Low Risk", "Medium Risk", "Elevated Risk", "High Risk"} for row in risk_rows)
+
+    # Ensure risk scores are numeric and in a realistic range
+    for row in risk_rows:
+        score = float(row["risk_score"])
+        assert 0 <= score <= 30
+
+    assert any(row["risk_category"] == "High Risk" for row in risk_rows), "At least one High Risk customer expected"

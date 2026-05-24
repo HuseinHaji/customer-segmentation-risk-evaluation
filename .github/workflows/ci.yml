@@ -20,13 +20,13 @@ jobs:
           python -m venv .venv
           source .venv/bin/activate
           pip install --upgrade pip
-          pip install -r requirements.txt || true
-          pip install -r requirements-dev.txt || true
-      - name: Lint & format check
+          pip install -r requirements.txt
+          pip install -r requirements-dev.txt
+      - name: Pipeline smoke test
         run: |
           source .venv/bin/activate
-          pre-commit run --all-files || true
+          python src/segment_customers.py
       - name: Run tests
         run: |
           source .venv/bin/activate
-          pytest -q || true
+          pytest -q
